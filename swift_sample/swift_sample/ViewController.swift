@@ -27,6 +27,18 @@ class ViewController: UIViewController {
         let msg2 = "Hello World"
         print("msg2 =",msg2)
         
+        /* 変数 val */
+
+        // Pettern - 1
+        var msg3: String
+        msg3 = "Hello World"
+        msg3 = "Hello Again"
+        print("msg3 =",msg3)
+
+        // Pettern - 2
+        var msg4 = "Hello World"
+        msg4 = "Hello Again"
+        print("msg4 =",msg4)
     }
 
     override func didReceiveMemoryWarning() {
