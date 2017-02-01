@@ -16,6 +16,17 @@ class ViewController: UIViewController {
         // Hello World
         print("Hello World")
 
+        /* 定数 let */
+        
+        // Pettern - 1
+        let msg1: String
+        msg1 = "Hello World"
+        print("msg1 =",msg1)
+
+        // Pettern - 2
+        let msg2 = "Hello World"
+        print("msg2 =",msg2)
+        
     }
 
     override func didReceiveMemoryWarning() {
