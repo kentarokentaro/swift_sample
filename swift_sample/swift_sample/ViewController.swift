@@ -62,6 +62,29 @@ class ViewController: UIViewController {
         x = String(5)
         print("change x =",x)
         
+        /* 演算 Calculation*/
+        
+        //数値
+        print(10 / 3)
+        print(10.0 / 3)
+        print(10 % 3)
+        
+        var y = 10
+        y = y + 10
+        y += 5
+        print(y)
+        
+        // 文字列 String
+        print("hello" + "world")
+        print("y is \(y)")
+        print("y2 is \(y * 2)")
+        
+        // 論理値
+        print(true && false)
+        print(true || false)
+        print(!true)
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
