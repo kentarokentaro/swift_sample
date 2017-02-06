@@ -39,6 +39,29 @@ class ViewController: UIViewController {
         var msg4 = "Hello World"
         msg4 = "Hello Again"
         print("msg4 =",msg4)
+        
+        /* 基本的な型 Basic Class */
+        //Int
+        let i = 10
+        print("int i =",i)
+
+        //Float Double
+        let d = 53.8
+        print("float d =",d)
+        
+        //String
+        let s = "hello"
+        print("String s =",s)
+        
+        //BOOL true/false
+        let flag = true
+        print("BOOL flag =",flag)
+        
+        //簡単な型変換
+        var x = "five"
+        x = String(5)
+        print("change x =",x)
+        
     }
 
     override func didReceiveMemoryWarning() {
