@@ -84,7 +84,34 @@ class ViewController: UIViewController {
         print(true || false)
         print(!true)
         
+     
+        /* if */
+        var score = 40
         
+        // 乱数 rand
+        score = Int(arc4random() % 100 + 1)
+
+        var result: String
+        
+        // if文
+        if score > 80
+        {
+            result = "great!"
+        }
+        else if score > 60
+        {
+            result = "good!"
+        }
+        else
+        {
+            result = "so so ..."
+        }
+        
+        // 条件演算子
+        result = score > 80 ? "great" : "so so ..."
+        
+        print("score = ",score)
+        print("result = ",result)
     }
 
     override func didReceiveMemoryWarning() {
