@@ -207,6 +207,28 @@ class ViewController: UIViewController {
             print(name)
         }
         
+        /* タプル */
+        // 別の型同士での配列
+        var items1 = ("apple", 5)
+        // 呼び出し
+        print(items1.0)
+        // 書き込み
+        items1.1 = 8
+        print(items1)
+
+        // 別の変数に割り当てる
+        let (product1, amount1) = items1
+        print(product1)
+        print(amount1)
+        
+        // 不要な要素を消す
+        let (product2, _) = items1
+        print(product2)
+        
+        // キー名をつけてセットする
+        let items2 = (product3: "apple", amount3: 5)
+        print(items2.product3)
+        
     }
 
     override func didReceiveMemoryWarning() {
