@@ -156,6 +156,27 @@ class ViewController: UIViewController {
             print(i)
         }
         
+        /* Optional type */
+        let s1 :Optional<String> = nil
+        let s2 :String? = nil
+        
+        if s1 != nil {
+            print(s1!) // Optional型の変数を取り出すには!が必要
+        }
+        
+        if s2 != nil {
+            print(s2!) // Optional型の変数を取り出すには!が必要
+        }
+        
+        // Optional Binding
+        // 例:s1がnilでなかった場合にvalueへ代入される
+        if let value = s1
+        {
+            print(value)
+        }
+        
+        // 条件演算子のような書き方もある
+        print(s1 ?? "this is nil!")
     }
 
     override func didReceiveMemoryWarning() {
