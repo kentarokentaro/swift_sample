@@ -177,6 +177,36 @@ class ViewController: UIViewController {
         
         // 条件演算子のような書き方もある
         print(s1 ?? "this is nil!")
+        
+        
+        /* 配列 */
+        
+        // 配列の生成
+        //var scores : [Int] = [50, 40]
+        var scores = [50, 40]
+        print(scores[0]) // 50
+
+        // 要素の書き換え
+        scores[1] = 30
+        
+        print(scores)
+        print(scores.count)
+        
+        // nil確認
+        print(scores.isEmpty)
+        
+        // 空の配列の生成
+        var names = [String]()
+        // 要素の追加
+        names.append("kentaro")
+        names.append("miura")
+        names += ["miurakentaro"]
+        
+        // 出力
+        for name in names {
+            print(name)
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {
