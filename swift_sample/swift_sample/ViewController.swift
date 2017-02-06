@@ -130,6 +130,21 @@ class ViewController: UIViewController {
         default:
             print("not available")
         }
+        
+        /* while */
+        var n = 10
+        
+        // while文
+        while n < 3 {
+            print(n)
+            n += 1
+        }
+        
+        // repeat while文
+        repeat {
+            print(n)
+            n += 1
+        }while n < 3
     }
 
     override func didReceiveMemoryWarning() {
