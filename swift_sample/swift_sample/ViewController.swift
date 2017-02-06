@@ -229,6 +229,31 @@ class ViewController: UIViewController {
         let items2 = (product3: "apple", amount3: 5)
         print(items2.product3)
         
+        
+        /* 集合 */
+        var winners: Set<Int> = [3, 4, 8, 8]
+        print(winners)
+        print(winners.contains(3))
+        winners.insert(10)
+        winners.remove(5)
+        print(winners)
+        print(winners.count)
+        
+        // 集合型の生成
+        let s3 = Set<Int>()
+        print(s3.isEmpty)
+        
+        // ２つの集合型
+        let a: Set = [1,3,5,8]
+        let b: Set = [3,5,8,9]
+        
+        // 和集合（合わせる）
+        print(a.union(b))
+        // 積集合（被ってるものだけ）
+        print(a.intersection(b))
+        // 差集合（被ってるものを省く）
+        print(a.subtracting(b))
+        
     }
 
     override func didReceiveMemoryWarning() {
