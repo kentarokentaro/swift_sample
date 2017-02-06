@@ -112,6 +112,24 @@ class ViewController: UIViewController {
         
         print("score = ",score)
         print("result = ",result)
+        
+        // switch
+        var num = 0
+        num = Int(arc4random() % 15 + 1)
+        switch num {
+        case 0:
+            print("zero")
+        case 1,2,3:
+            print("small")
+        case 4...6:
+            print("4/5/6")
+        case 7..<9 :
+            print("7/8")
+        case let n where n > 20:
+            print("\(n) is huge!")
+        default:
+            print("not available")
+        }
     }
 
     override func didReceiveMemoryWarning() {
