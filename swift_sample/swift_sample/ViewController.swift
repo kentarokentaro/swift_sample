@@ -254,6 +254,29 @@ class ViewController: UIViewController {
         // 差集合（被ってるものを省く）
         print(a.subtracting(b))
         
+        
+        /* 辞書 */
+        // var salse: Dictionary<String, Int> = ["miura": 200,"kentaro": 300]
+        
+        // dictionary型の生成
+        var sales = ["miura": 200,"kentaro": 300]
+        // 要素の書き換え
+        sales["kentaro"] = 500
+        // 要素はOptinal型
+        print(sales["kentaro"] ?? "n.a.")
+        // 要素の追加
+        sales["miurakentaro"] = 600
+        // 要素数
+        print(sales.count)
+        
+        for (key, value) in sales {
+            print("\(key):\(value)")
+        }
+        
+        // 空のdictionaryの変数を生成
+        let d2 = [String: Int]()
+        print(d2.isEmpty)
+
     }
 
     override func didReceiveMemoryWarning() {
