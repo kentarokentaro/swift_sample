@@ -145,6 +145,17 @@ class ViewController: UIViewController {
             print(n)
             n += 1
         }while n < 3
+
+        /* for */
+        
+        // for文
+        for i in 0...5 {
+            if i == 3 {
+                break
+            }
+            print(i)
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {
