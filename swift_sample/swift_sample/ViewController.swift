@@ -351,6 +351,32 @@ class ViewController: UIViewController {
         // inout引数の場合&がつき、かつ変数で渡さなければいけない
         add10(x: &i2)
         print(i2)
+        
+        
+        /* クラス Class */
+        
+        // クラス名をセット
+        class User
+        {
+            // プロパティセット
+            let name: String
+            var score: Int
+            
+            // initして初期値を設定する
+            init() {
+                self.name = "kentaro"
+                self.score = 100
+            }
+        }
+        
+        //　インスタンス変数の生成
+        //let user:User = User()
+        let user = User()
+        print(user.name)
+        print(user.score)
+        user.score = 200
+        print(user.score)
+        
     }
 
     override func didReceiveMemoryWarning() {
