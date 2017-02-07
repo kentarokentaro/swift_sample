@@ -277,6 +277,24 @@ class ViewController: UIViewController {
         let d2 = [String: Int]()
         print(d2.isEmpty)
 
+        /* 関数 */
+        
+        // 関数をセット
+        func sayHi1()
+        {
+            print("Hi!")
+        }
+        // 関数を呼び出し
+        sayHi1()
+        
+        //　返り値のある関数をセット
+        func sayHi2() -> String
+        {
+            return "Hi!!"
+        }
+        //　返り値のある関数の呼び出し
+        print(sayHi2())
+        
     }
 
     override func didReceiveMemoryWarning() {
