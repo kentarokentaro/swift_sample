@@ -558,6 +558,56 @@ class ViewController: UIViewController {
         kenken.sayHi()
         kenken.sayMsg1(msg: "hola")
         kenken.sayMsg2("holu")
+        
+        
+        /* クラス継承 class inheritance */
+        // User8 -> AdminiUser
+        
+        
+        // 継承元クラス
+        class User8
+        {
+            let name: String
+            var score: Int
+            init(_ name:String, _ score: Int)
+            {
+                self.name = name
+                self.score = score
+            }
+            func sayHi()
+            {
+                print("Hi! \(name)")
+            }
+        }
+        
+        // 継承クラス
+        class AdminiUser: User8
+        {
+            // 追加でクラスメッソドをセット
+            func sayHello()
+            {
+                print("Hello! \(name)")
+            }
+            // 継承元のクラスメソッドを上書き override
+            // ※finalも使える
+            override func sayHi()
+            {
+                print("[Admin] Hi! \(name)")
+            }
+        }
+        
+        let kensuke = User8("kensuke", 80)
+        print(kensuke.name)
+        print(kensuke.score)
+        kensuke.sayHi()
+        
+        let kensuken = AdminiUser("kensuken", 100)
+        print(kensuken.name)
+        print(kensuken.score)
+        kensuken.sayHi()
+        kensuken.sayHello()
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
