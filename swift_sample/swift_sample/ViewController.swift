@@ -662,6 +662,44 @@ class ViewController: UIViewController {
         AdminiUser1.getInfo1()
         print(kentas.name)
         
+        
+        /* クラスキャスト */
+        class User10
+        {
+            let name: String
+            init(_ name: String)
+            {
+                self.name = name
+            }
+        }
+        
+        class AdminiUser2:User10
+        {
+        
+        }
+        
+        let kenn = User10("kenn")
+        let kennn = AdminiUser2("kennn")
+
+        // 同じ型に入れ込む
+        let users: [User10] = [kenn,kennn]
+        
+        // 特定の方だけを抜き出す
+        for user in users {
+            //if let u = user as? AdminiUser2
+            //{
+            //    print(u.name)
+            //}
+            
+            // isは型チェック
+            if user is AdminiUser2
+            {
+                // asは型割り当て
+                let u = user as! AdminiUser2
+                print(u.name)
+            }
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {
