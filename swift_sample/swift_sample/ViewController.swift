@@ -527,7 +527,37 @@ class ViewController: UIViewController {
         kenichi.score = 53
         kenichi.score = 40
         
+        /* クラスを使う */
+        class User7
+        {
+            let name: String
+            var score: Int
+            init(_ name:String, _ score: Int)
+            {
+                self.name = name
+                self.score = score
+            }
+            
+            // クラスメソッド
+            func sayHi()
+            {
+                print("Hi! \(name)")
+            }
+            func sayMsg1(msg:String)
+            {
+                print("\(msg) \(name)")
+            }
+            func sayMsg2(_ msg:String)
+            {
+                print("\(msg) \(name)")
+            }
+
+        }
         
+        let kenken = User7("kenken",200)
+        kenken.sayHi()
+        kenken.sayMsg1(msg: "hola")
+        kenken.sayMsg2("holu")
     }
 
     override func didReceiveMemoryWarning() {
