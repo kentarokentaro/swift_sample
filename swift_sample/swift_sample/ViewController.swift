@@ -608,6 +608,60 @@ class ViewController: UIViewController {
         kensuken.sayHello()
         
         
+        /* 型プロパティ 型メソッド */
+        class User9
+        {
+            let name: String
+            var score: Int
+            
+            // 型プロパティ
+            static var count = 0
+            
+            init(_ name:String, _ score: Int)
+            {
+                self.name = name
+                self.score = score
+                User9.count += 1
+            }
+            
+            // 型メソッド staticをつけるとoverrideできない
+            static func getInfo()
+            {
+                print("\(count) instances")
+            }
+            
+            // 型メソッド classをつけるとoverrideできる
+            class func getInfo1()
+            {
+                print("\(count) instances")
+            }
+
+        }
+        
+        // 継承クラス
+        class AdminiUser1: User9
+        {
+            // 型メソッドの継承
+            override class func getInfo1()
+            {
+                print("[Adminn]\(count) instances")
+            }
+        }
+        
+        // 継承元
+        User9.getInfo()
+        let kenta = User9("kenta",99)
+        User9.getInfo()
+        print(kenta.name)
+        
+        // 継承
+        AdminiUser1.getInfo()
+        AdminiUser1.getInfo1()
+        let kentas = AdminiUser1("kentas",199)
+        AdminiUser1.getInfo()
+        AdminiUser1.getInfo1()
+        print(kentas.name)
+        
     }
 
     override func didReceiveMemoryWarning() {
