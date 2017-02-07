@@ -496,6 +496,38 @@ class ViewController: UIViewController {
         let kent = User5("Kent",200)
         print(kent.level)
         
+        
+        /* プロパティ監視 */
+        class User6
+        {
+            let name: String
+            
+            var score: Int
+            {
+                // scoreの値が書き換わる前 - newValueが使える
+                willSet
+                {
+                    print("\(score) -> \(newValue)")
+                }
+                // scoreの値が書き終わった時 - oldValuが使える
+                didSet
+                {
+                    print("Changed: \(score - oldValue)")
+                }
+            }
+            
+            init(_ name:String, _ score: Int)
+            {
+                self.name = name
+                self.score = score
+            }
+        }
+        
+        let kenichi = User6("kenichi", 23)
+        kenichi.score = 53
+        kenichi.score = 40
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
