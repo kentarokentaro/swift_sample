@@ -377,6 +377,72 @@ class ViewController: UIViewController {
         user.score = 200
         print(user.score)
         
+        
+        /* イニシャライザ */
+        class User1
+        {
+            // プロパティセット
+            let name: String
+            var score: Int
+            
+            // init時に引数を渡す
+            init(name: String, score: Int) {
+                self.name = name
+                self.score = score
+            }
+        }
+        
+        // 設定したい引数をセットする
+        let miura = User1(name: "miura", score: 500)
+        print(miura.name,miura.score)
+        
+        
+        //引数あり
+        class User2
+        {
+            // プロパティセット
+            let name: String
+            var score: Int
+            
+            // init時に引数を渡す、引数名ラベルを省略できる
+            init(_ name: String, _ score: Int) {
+                self.name = name
+                self.score = score
+            }
+        }
+        
+        // 設定したい引数をセットする
+        let miura1 = User2("miura1", 600)
+        print(miura1.name,miura1.score)
+        
+        
+        //引数あってもなくても
+        class User3
+        {
+            // プロパティセット
+            let name: String
+            var score: Int
+            
+            // init時に引数を渡す、引数名ラベルを省略できる
+            init(_ name: String, _ score: Int) {
+                self.name = name
+                self.score = score
+            }
+            // 引数が渡されなかった場合の処理
+            init() {
+                self.name = "defalut miura"
+                self.score = 100
+            }
+        }
+        
+        // 設定したい引数をセットする
+        let miura2 = User3("miura2", 800)
+        print(miura2.name,miura2.score)
+        
+        // 設定したい引数なしでセットする
+        let miura3 = User3()
+        print(miura3.name,miura3.score)
+        
     }
 
     override func didReceiveMemoryWarning() {
