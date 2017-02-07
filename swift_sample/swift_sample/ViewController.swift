@@ -443,6 +443,59 @@ class ViewController: UIViewController {
         let miura3 = User3()
         print(miura3.name,miura3.score)
         
+        
+        /* 計算プロパティ */
+        class User4
+        {
+            let name: String
+            var score : Int
+            
+            // ここが計算プロパティ
+            var level: Int {
+                get
+                {
+                    return Int(score / 10)
+                }
+                set {
+                    if newValue >= 0 {
+                        score = newValue * 10
+                    }
+                }
+            }
+            init(_ name:String, _ score: Int)
+            {
+                self.name = name
+                self.score = score
+            }
+        }
+        
+        let ken = User4("Ken",100)
+        print(ken.level)
+        ken.level = 5
+        print(ken.score)
+        ken.level = -3
+        print(ken.score)
+        
+        class User5
+        {
+            let name: String
+            var score : Int
+            
+            // ここが計算プロパティ getだけの場合の書き方
+            var level: Int
+            {
+                return Int(score / 10)
+            }
+            init(_ name:String, _ score: Int)
+            {
+                self.name = name
+                self.score = score
+            }
+        }
+        
+        let kent = User5("Kent",200)
+        print(kent.level)
+        
     }
 
     override func didReceiveMemoryWarning() {
