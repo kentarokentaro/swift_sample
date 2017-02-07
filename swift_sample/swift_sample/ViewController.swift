@@ -8,6 +8,15 @@
 
 import UIKit
 
+/* プロトコル */
+protocol Printable
+{
+    //　プロトコル内はvarで宣言
+    var type: String { get }
+    var count: Int { get set}
+    func printout()
+}
+
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
@@ -700,8 +709,29 @@ class ViewController: UIViewController {
             }
         }
         
-    }
 
+        /* プロトコル */
+        class User11: Printable
+        {
+            let name: String
+            let type = "laser"
+            var count = 0
+            init(_ name: String)
+            {
+                self.name = name
+            }
+            func printout()
+            {
+                count += 1
+                print("\(type) \(count)")
+            }
+        }
+        let kemkem = User11("kemkem")
+        kemkem.printout()
+        kemkem.printout()
+        kemkem.printout()
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
