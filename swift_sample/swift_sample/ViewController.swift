@@ -295,6 +295,49 @@ class ViewController: UIViewController {
         //　返り値のある関数の呼び出し
         print(sayHi2())
         
+        
+        /* 関数(引数) */
+
+        // 引数のある関数をセット_1
+        func sayHi3(name: String)
+        {
+            print("hi \(name)")
+        }
+
+        // 引数のある関数を呼び出し、引数を渡す_1
+        sayHi3(name: "kentaro")
+
+        // 引数のある関数をセット_2
+        // 引数名のラベルをわかりやすいものに変更する
+        func sayHi4(from name: String)
+        {
+            print("hi \(name)")
+        }
+
+        // 引数のある関数を呼び出し、引数を渡す_2
+        sayHi4(from: "kentaro")
+
+        // 引数のある関数をセット_3
+        // 引数名を省略する
+        func sayHi5(_ name: String)
+        {
+            print("hi \(name)")
+        }
+
+        // 引数のある関数を呼び出し、引数を渡す_3
+        sayHi5("kentaro")
+
+        // 引数のある関数をセット_4
+        // 引数に初期値をセットする
+        func sayHi6(_ name: String = "miura")
+        {
+            print("hi \(name)")
+        }
+
+        // 引数のある関数を呼び出し、引数を渡す_4
+        // 引数の初期値があるので渡す引数はなくても呼び出せる
+        sayHi6()
+        sayHi6("kentaro")
     }
 
     override func didReceiveMemoryWarning() {
