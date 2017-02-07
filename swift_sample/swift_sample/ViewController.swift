@@ -338,6 +338,19 @@ class ViewController: UIViewController {
         // 引数の初期値があるので渡す引数はなくても呼び出せる
         sayHi6()
         sayHi6("kentaro")
+        
+        
+        /* inout 引数は基本定数の扱い、引数に代入したい場合の処理 */
+        func add10(x : inout Int)
+        {
+            x = x + 10
+            print(x)
+        }
+        
+        var i2 = 10
+        // inout引数の場合&がつき、かつ変数で渡さなければいけない
+        add10(x: &i2)
+        print(i2)
     }
 
     override func didReceiveMemoryWarning() {
