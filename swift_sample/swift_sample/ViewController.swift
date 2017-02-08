@@ -815,6 +815,36 @@ class ViewController: UIViewController {
         print(original2.name)
         print(copy2.name) //あくまで格納されている情報を見に行っているので実際にはoriginal2の値が表示される
         
+        /* 構造体 */
+        
+        // 構造体クラスの宣言
+        struct User14
+        {
+            var name: String
+            init(_ name: String)
+            {
+                self.name = name
+            }
+            // メソッドにて値を書き換えるにはmutatingが必要
+            mutating func changeName()
+            {
+                //.uppercasedは文字列を大文字にして返すプロパティメソッド
+                self.name = name.uppercased()
+            }
+        }
+        
+        // 構造体はクラスとほぼ同機能であるが、値型であり継承ができない。
+        // 拡張する場合はexteinsionやprotocolを使う
+        // 値を変えたくないデータを取り扱う場合に用いられる
+        var original3 = User14("keckec")
+        var copy3 = original3
+        
+        original3.name = "kedked"
+        print(original3.name)
+        print(copy3.name)
+        copy3.changeName()
+        print(copy3.name)
+
     }
     
     override func didReceiveMemoryWarning() {
