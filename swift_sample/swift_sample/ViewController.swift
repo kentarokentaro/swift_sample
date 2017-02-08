@@ -17,6 +17,53 @@ protocol Printable
     func printout()
 }
 
+/* 拡張 */
+
+// 拡張元クラス
+class User12
+{
+    let name: String
+    init(_ name: String)
+    {
+        self.name = name
+    }
+}
+
+// 拡張プロトコル
+extension Printable
+{
+    func printout()
+    {
+        print("now printing....")
+    }
+}
+
+//　拡張クラス
+extension User12: Printable
+{
+    var count: Int {
+        get {
+            return self.count
+        }
+        set {
+        }
+    }
+
+    var type: String {
+        return self.type
+    }
+
+    var username: String
+    {
+        return self.name
+    }
+    
+    func sayHello()
+    {
+        print("Hello!")
+    }
+}
+
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
@@ -730,6 +777,14 @@ class ViewController: UIViewController {
         kemkem.printout()
         kemkem.printout()
         kemkem.printout()
+        
+        
+        /* 拡張 */
+        let kevkev = User12("kemkem")
+        print(kevkev.username)
+        kevkev.sayHello()
+        kevkev.printout()
+
     }
     
     override func didReceiveMemoryWarning() {
