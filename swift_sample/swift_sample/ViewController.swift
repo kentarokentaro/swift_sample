@@ -896,6 +896,34 @@ class ViewController: UIViewController {
         let getThreeUser = User13("getThreeUser")
         getThree(x: getThreeUser)
         getThree(x: getThreeUser.name)
+        
+        
+        /* サブスクリプト */
+        
+        // クラスにインデックスをつける
+        class Team
+        {
+            var members = ["miura","kentaro","miurakentaro"]
+            subscript(index: Int) -> String
+            {
+                get
+                {
+                    return members[index]
+                }
+                set
+                {
+                    members.insert(newValue, at: index)
+                }
+            }
+        }
+        
+        let giants = Team()
+        giants[0] = "myura"
+        print(giants[1])
+        giants[3] = "kentaroll"
+        print(giants[3])
+        
+        
     }
     
     override func didReceiveMemoryWarning() {
