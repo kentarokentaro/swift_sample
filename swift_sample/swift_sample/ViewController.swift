@@ -876,6 +876,26 @@ class ViewController: UIViewController {
         case .left:
             print("left")
         }
+        
+        
+        /* ジェネリクス */
+        
+        // ジェネリクスの書き方をすればどの型の引数にも対応した関数となる
+        func getThree<T>(x: T)
+        {
+            print(x)
+            print(x)
+            print(x)
+        }
+        
+        // Int型
+        getThree(x: 5)
+        // String型
+        getThree(x: "hello")
+        // クラス
+        let getThreeUser = User13("getThreeUser")
+        getThree(x: getThreeUser)
+        getThree(x: getThreeUser.name)
     }
     
     override func didReceiveMemoryWarning() {
