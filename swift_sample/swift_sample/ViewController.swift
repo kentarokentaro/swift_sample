@@ -785,6 +785,36 @@ class ViewController: UIViewController {
         kevkev.sayHello()
         kevkev.printout()
 
+        
+        /* 値型と参照型 */
+
+        // 値型
+        var original1 = 10
+        let copy1 = original1
+        //  代入すると値そのものが渡される
+        original1 = 20
+        print(original1)
+        print(copy1)
+        
+        
+        // 参照型
+        class User13
+        {
+            var name: String
+            init(_ name: String)
+            {
+                self.name = name
+            }
+        }
+        
+        //  代入するとoriginalが格納されている場所が渡される
+        let original2 = User13("kerker")
+        let copy2 = original2
+
+        original2.name = "kebkeb"
+        print(original2.name)
+        print(copy2.name) //あくまで格納されている情報を見に行っているので実際にはoriginal2の値が表示される
+        
     }
     
     override func didReceiveMemoryWarning() {
