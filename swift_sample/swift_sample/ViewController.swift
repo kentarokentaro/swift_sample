@@ -926,7 +926,6 @@ class ViewController: UIViewController {
         
         /* guard */
         
-        
         func sayHi7(_ msg: String?)
         {
             if let s = msg
@@ -968,10 +967,59 @@ class ViewController: UIViewController {
         sayHi9("hello3")
 
         
+        /* 例外処理 */
         
+        // ログインエラーステータスを宣言、Errorプロトコルを使用
+        enum LoginError: Error
+        {
+            case emptyName
+            case shortName
+        }
+        class User15
+        {
+            let name: String
+            init(_ name: String) {
+                self.name = name
+            }
+            
+            // throws 例外処理
+            func login() throws
+            {
+                guard name != "" else
+                {
+                    throw LoginError.emptyName
+                }
+                guard name.characters.count > 5 else
+                {
+                    throw LoginError.shortName
+                }
+                print("login success")
+            }
+            
+        }
         
-        
-        
+        let userExep = User15("kentaro")
+        // 例外処理をキャッチする処理
+        do
+        {
+            //クラスメソッド呼び出し
+            try userExep.login()
+        }
+        // 空文字
+        catch LoginError.emptyName
+        {
+            print("please entry your name")
+        }
+        // 文字数不足
+        catch LoginError.shortName
+        {
+            print("too short")
+        }
+        // defaultとして必要
+        catch
+        {
+            print("Unknown Error")
+        }
     }
     
     override func didReceiveMemoryWarning() {
