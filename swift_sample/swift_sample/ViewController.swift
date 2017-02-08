@@ -924,6 +924,54 @@ class ViewController: UIViewController {
         print(giants[3])
         
         
+        /* guard */
+        
+        
+        func sayHi7(_ msg: String?)
+        {
+            if let s = msg
+            {
+                print(s)
+            }
+            else
+            {
+                print("value not set - sayHi7")
+            }
+        }
+        
+        // early return, early exit
+        func sayHi8(_ msg: String?)
+        {
+            if msg == nil
+            {
+                print("value not set - sayHi8")
+                return
+            }
+            print(msg!)
+        }
+
+        func sayHi9(_ msg: String?)
+        {
+            guard let s = msg else
+            {
+                print("value not set - sayHi9")
+                return
+            }
+            print(s)
+        }
+        
+        sayHi7(nil)
+        sayHi7("hello1")
+        sayHi8(nil)
+        sayHi8("hello2")
+        sayHi9(nil)
+        sayHi9("hello3")
+
+        
+        
+        
+        
+        
     }
     
     override func didReceiveMemoryWarning() {
