@@ -845,6 +845,37 @@ class ViewController: UIViewController {
         copy3.changeName()
         print(copy3.name)
 
+        
+        /* 列挙型 */
+        enum Direction
+        {
+            case right
+            case left
+        }
+        
+        var dir: Direction
+//        dir = Direction.right
+        let randomInt = Int(arc4random() % 2)
+        if randomInt == 0
+        {
+            // 列挙型名を省略できる
+//            dir = Direction.right
+            dir = .right
+        }
+        else
+        {
+            // 列挙型名を省略できる
+//            dir = Direction.left
+            dir = .left
+        }
+
+        // 列挙型を使いかつcaseを全て使ってない場合、switch文でWarningが出る
+        switch dir {
+        case .right:
+            print("right")
+        case .left:
+            print("left")
+        }
     }
     
     override func didReceiveMemoryWarning() {
