@@ -1037,6 +1037,32 @@ class ViewController: UIViewController {
         if let sss = user16?.name?.uppercased() {
             print(sss)
         }
+        
+        
+        /* 暗黙的アンラップオプショナル型 */
+        
+        // 通常Optional型で宣言
+        let msg5: String?
+        msg5 = "hello"
+
+        if msg5 != nil
+        {
+            // 通常は取り出す際には案ラップする !をつける
+            print(msg5!)
+        }
+        
+        // 暗黙的アンラップオプショナル型で宣言
+        let msg6: ImplicitlyUnwrappedOptional<String>
+        msg6 = "heello"
+        // 暗黙的アンラップオプショナル型なので !いらない
+        print(msg6)
+        
+        // 暗黙的アンラップオプショナル型で宣言(省略)
+        let msg7: String!
+        msg7 = "heello"
+        // 暗黙的アンラップオプショナル型なので !いらない
+        print(msg7)
+        
     }
     
     override func didReceiveMemoryWarning() {
