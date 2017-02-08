@@ -1020,6 +1020,23 @@ class ViewController: UIViewController {
         {
             print("Unknown Error")
         }
+        
+        
+        /* Optional Chaining */
+        class User16
+        {
+            var name: String? = ""
+        }
+        
+        // 型名の後ろに？つけるのはOptional型宣言
+        let user16: User16?
+        user16 = User16()
+        
+        // 変数名の後ろに?をつけるのはOptional Chaining　→ nilチェック → nilで落ちないようにする
+        user16?.name = ""
+        if let sss = user16?.name?.uppercased() {
+            print(sss)
+        }
     }
     
     override func didReceiveMemoryWarning() {
