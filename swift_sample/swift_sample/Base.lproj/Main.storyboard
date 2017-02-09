@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12072"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -22,36 +23,36 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tE0-dd-4cd">
-                                <rect key="frame" x="5" y="25" width="404" height="50"/>
+                                <rect key="frame" x="5" y="25" width="404" height="174"/>
                                 <color key="backgroundColor" red="0.25098040700000002" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="fGg-48-00k"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="UoX-f6-3CD"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m5m-a2-ubB">
-                                <rect key="frame" x="5" y="80" width="404" height="100"/>
+                                <rect key="frame" x="5" y="204" width="404" height="174"/>
                                 <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="qvb-dG-H11"/>
-                                </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="adg-Wb-O3h">
-                                <rect key="frame" x="5" y="185" width="404" height="546"/>
+                                <rect key="frame" x="5" y="383" width="404" height="348"/>
                                 <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="adg-Wb-O3h" secondAttribute="bottom" constant="5" id="AVU-zd-WAs"/>
-                            <constraint firstAttribute="trailing" secondItem="m5m-a2-ubB" secondAttribute="trailing" constant="5" id="IDT-CQ-IRR"/>
-                            <constraint firstItem="tE0-dd-4cd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="5" id="Jvr-TT-jF8"/>
-                            <constraint firstAttribute="trailing" secondItem="adg-Wb-O3h" secondAttribute="trailing" constant="5" id="Plc-R8-1Mx"/>
-                            <constraint firstAttribute="trailing" secondItem="tE0-dd-4cd" secondAttribute="trailing" constant="5" id="SeJ-Cm-XVm"/>
-                            <constraint firstItem="m5m-a2-ubB" firstAttribute="top" secondItem="tE0-dd-4cd" secondAttribute="bottom" constant="5" id="V3o-Vd-kiQ"/>
-                            <constraint firstItem="adg-Wb-O3h" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="5" id="hhy-XF-Y2L"/>
-                            <constraint firstItem="tE0-dd-4cd" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="5" id="kBP-lO-WNB"/>
-                            <constraint firstItem="m5m-a2-ubB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="5" id="m7m-98-rXO"/>
-                            <constraint firstItem="adg-Wb-O3h" firstAttribute="top" secondItem="m5m-a2-ubB" secondAttribute="bottom" constant="5" id="p4m-3N-Uin"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="adg-Wb-O3h" secondAttribute="bottom" constant="5" id="233-8r-eIh"/>
+                            <constraint firstItem="m5m-a2-ubB" firstAttribute="top" secondItem="tE0-dd-4cd" secondAttribute="bottom" constant="5" id="A5c-gD-S4T"/>
+                            <constraint firstAttribute="trailing" secondItem="m5m-a2-ubB" secondAttribute="trailing" constant="5" id="AzI-tp-V28"/>
+                            <constraint firstItem="m5m-a2-ubB" firstAttribute="top" secondItem="tE0-dd-4cd" secondAttribute="bottom" constant="5" id="DIG-tj-Vg1"/>
+                            <constraint firstItem="adg-Wb-O3h" firstAttribute="top" secondItem="m5m-a2-ubB" secondAttribute="bottom" constant="5" id="JgH-sh-fP4"/>
+                            <constraint firstAttribute="trailing" secondItem="tE0-dd-4cd" secondAttribute="trailing" constant="5" id="LyR-oW-HdE"/>
+                            <constraint firstItem="m5m-a2-ubB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="5" id="Pal-lB-idw"/>
+                            <constraint firstAttribute="trailing" secondItem="adg-Wb-O3h" secondAttribute="trailing" constant="5" id="YlF-Wh-dgj"/>
+                            <constraint firstItem="tE0-dd-4cd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="5" id="cNI-J4-IoL"/>
+                            <constraint firstItem="adg-Wb-O3h" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="5" id="cVq-gf-Mlg"/>
+                            <constraint firstItem="adg-Wb-O3h" firstAttribute="height" secondItem="tE0-dd-4cd" secondAttribute="height" multiplier="2" id="fWV-fm-elW"/>
+                            <constraint firstItem="tE0-dd-4cd" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="5" id="iH5-nq-a1J"/>
+                            <constraint firstItem="m5m-a2-ubB" firstAttribute="height" secondItem="tE0-dd-4cd" secondAttribute="height" id="mUF-wo-tve"/>
                         </constraints>
                     </view>
                 </viewController>
