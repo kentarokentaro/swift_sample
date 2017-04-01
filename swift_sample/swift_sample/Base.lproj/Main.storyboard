@@ -43,6 +43,7 @@
                     <navigationItem key="navigationItem" id="gjC-mD-k4l"/>
                     <connections>
                         <outlet property="mainTableView" destination="C25-0O-3zK" id="5oh-77-Gsd"/>
+                        <segue destination="Gq3-Ic-ozb" kind="show" identifier="showDetailViewController" id="kPv-LN-noO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
