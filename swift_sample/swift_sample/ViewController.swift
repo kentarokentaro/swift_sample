@@ -1082,6 +1082,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
         print("select %d", indexPath.row)
+        performSegue(withIdentifier: "showDetailViewController",sender: nil)
     }
 }
 
