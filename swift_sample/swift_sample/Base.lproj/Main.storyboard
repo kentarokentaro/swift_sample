@@ -25,6 +25,10 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="WHr-AH-FIt"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="LeD-0x-pbZ"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -36,6 +40,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="gjC-mD-k4l"/>
+                    <connections>
+                        <outlet property="mainTableView" destination="C25-0O-3zK" id="5oh-77-Gsd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

@@ -66,6 +66,7 @@ extension User12: Printable
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var mainTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
