@@ -64,7 +64,7 @@ extension User12: Printable
     }
 }
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
 
     @IBOutlet weak var mainTableView: UITableView!
     override func viewDidLoad() {
@@ -1070,6 +1070,18 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
 
-
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.subtitle, reuseIdentifier: "Cell")
+        cell.textLabel?.text = ("Cell \(indexPath.row)")
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 20;
+    }
+    
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        print("select %d", indexPath.row)
+    }
 }
 
