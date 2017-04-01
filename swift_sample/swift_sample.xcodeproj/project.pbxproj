@@ -14,6 +14,7 @@
 		F866037A1DF2CD1D006E74BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F86603781DF2CD1D006E74BD /* LaunchScreen.storyboard */; };
 		F86603851DF2CD1D006E74BD /* swift_sampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86603841DF2CD1D006E74BD /* swift_sampleTests.swift */; };
 		F86603901DF2CD1D006E74BD /* swift_sampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F866038F1DF2CD1D006E74BD /* swift_sampleUITests.swift */; };
+		F8FAC5EF1E8FDDE400E3BFFE /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8FAC5EE1E8FDDE400E3BFFE /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		F866038B1DF2CD1D006E74BD /* swift_sampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = swift_sampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F866038F1DF2CD1D006E74BD /* swift_sampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swift_sampleUITests.swift; sourceTree = "<group>"; };
 		F86603911DF2CD1D006E74BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F8FAC5EE1E8FDDE400E3BFFE /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			children = (
 				F866036F1DF2CD1D006E74BD /* AppDelegate.swift */,
 				F86603711DF2CD1D006E74BD /* ViewController.swift */,
+				F8FAC5EE1E8FDDE400E3BFFE /* DetailViewController.swift */,
 				F86603731DF2CD1D006E74BD /* Main.storyboard */,
 				F86603761DF2CD1D006E74BD /* Assets.xcassets */,
 				F86603781DF2CD1D006E74BD /* LaunchScreen.storyboard */,
@@ -188,7 +191,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Miura Kentaro";
 				TargetAttributes = {
 					F866036B1DF2CD1D006E74BD = {
@@ -262,6 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8FAC5EF1E8FDDE400E3BFFE /* DetailViewController.swift in Sources */,
 				F86603721DF2CD1D006E74BD /* ViewController.swift in Sources */,
 				F86603701DF2CD1D006E74BD /* AppDelegate.swift in Sources */,
 			);
@@ -336,6 +340,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -386,6 +391,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -514,6 +520,7 @@
 				F86603961DF2CD1D006E74BD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F86603971DF2CD1D006E74BD /* Build configuration list for PBXNativeTarget "swift_sampleTests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +529,7 @@
 				F86603991DF2CD1D006E74BD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F866039A1DF2CD1D006E74BD /* Build configuration list for PBXNativeTarget "swift_sampleUITests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +538,7 @@
 				F866039C1DF2CD1D006E74BD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
