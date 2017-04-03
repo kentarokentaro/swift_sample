@@ -67,6 +67,8 @@ extension User12: Printable
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
 
     @IBOutlet weak var mainTableView: UITableView!
+    var textData: String!
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -1080,9 +1082,18 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return 20;
     }
     
-    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("select %d", indexPath.row)
+        textData = (String(format: "select %d",indexPath.row))
         performSegue(withIdentifier: "showDetailViewController",sender: nil)
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
+        if (segue.identifier == "showDetailViewController") {
+            let detailViewController: DetailViewController = (segue.destination as? DetailViewController)!
+            detailViewController.textData = textData
+        }
     }
 }
 
