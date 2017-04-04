@@ -64,14 +64,19 @@ extension User12: Printable
     }
 }
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
 
+    @IBOutlet weak var mainTableView: UITableView!
+    var textData: String!
+    var items = [String]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Hello World
         print("Hello World")
-
+        items.append("Hello World")
+        
         /* 定数 let */
         
         // Pettern - 1
@@ -82,6 +87,8 @@ class ViewController: UIViewController {
         // Pettern - 2
         let msg2 = "Hello World"
         print("msg2 =",msg2)
+        
+        items.append("定数 let")
         
         /* 変数 val */
 
@@ -95,6 +102,8 @@ class ViewController: UIViewController {
         var msg4 = "Hello World"
         msg4 = "Hello Again"
         print("msg4 =",msg4)
+        
+        items.append("変数 val")
         
         /* 基本的な型 Basic Class */
         //Int
@@ -118,6 +127,12 @@ class ViewController: UIViewController {
         x = String(5)
         print("change x =",x)
         
+        items.append("基本的な型 Basic Class - Int")
+        items.append("基本的な型 Basic Class - Float Double")
+        items.append("基本的な型 Basic Class - String")
+        items.append("基本的な型 Basic Class - BOOL true/false")
+        items.append("基本的な型 Basic Class - 簡単な型変換")
+        
         /* 演算 Calculation*/
         
         //数値
@@ -139,7 +154,7 @@ class ViewController: UIViewController {
         print(true && false)
         print(true || false)
         print(!true)
-        
+        items.append("演算 Calculation")
      
         /* if */
         var score = 40
@@ -163,11 +178,15 @@ class ViewController: UIViewController {
             result = "so so ..."
         }
         
+        items.append("if文")
+        
         // 条件演算子
         result = score > 80 ? "great" : "so so ..."
         
         print("score = ",score)
         print("result = ",result)
+        
+        items.append("条件演算子")
         
         // switch
         var num = 0
@@ -186,6 +205,7 @@ class ViewController: UIViewController {
         default:
             print("not available")
         }
+        items.append("switch文")
         
         /* while */
         var n = 10
@@ -195,13 +215,15 @@ class ViewController: UIViewController {
             print(n)
             n += 1
         }
+        items.append("while文")
         
         // repeat while文
         repeat {
             print(n)
             n += 1
         }while n < 3
-
+        items.append("repeat while文")
+        
         /* for */
         
         // for文
@@ -211,6 +233,7 @@ class ViewController: UIViewController {
             }
             print(i)
         }
+        items.append("for文")
         
         /* Optional type */
         let s1 :Optional<String> = nil
@@ -223,6 +246,7 @@ class ViewController: UIViewController {
         if s2 != nil {
             print(s2!) // Optional型の変数を取り出すには!が必要
         }
+        items.append("Optional type")
         
         // Optional Binding
         // 例:s1がnilでなかった場合にvalueへ代入される
@@ -230,10 +254,11 @@ class ViewController: UIViewController {
         {
             print(value)
         }
+        items.append("Optional Binding")
         
         // 条件演算子のような書き方もある
         print(s1 ?? "this is nil!")
-        
+        items.append("Optional 条件演算子")
         
         /* 配列 */
         
@@ -241,27 +266,35 @@ class ViewController: UIViewController {
         //var scores : [Int] = [50, 40]
         var scores = [50, 40]
         print(scores[0]) // 50
-
+        items.append("配列 - 生成")
+        
         // 要素の書き換え
         scores[1] = 30
         
         print(scores)
         print(scores.count)
+        items.append("配列 - 書き換え")
         
         // nil確認
         print(scores.isEmpty)
+        items.append("配列 - nil確認")
         
         // 空の配列の生成
         var names = [String]()
+
         // 要素の追加
         names.append("kentaro")
         names.append("miura")
         names += ["miurakentaro"]
         
+        items.append("配列 - 空の配列と要素の追加")
+        
         // 出力
         for name in names {
             print(name)
         }
+        
+        items.append("配列 - 出力")
         
         /* タプル */
         // 別の型同士での配列
@@ -285,6 +318,7 @@ class ViewController: UIViewController {
         let items2 = (product3: "apple", amount3: 5)
         print(items2.product3)
         
+        items.append("タプル")
         
         /* 集合 */
         var winners: Set<Int> = [3, 4, 8, 8]
@@ -310,6 +344,7 @@ class ViewController: UIViewController {
         // 差集合（被ってるものを省く）
         print(a.subtracting(b))
         
+        items.append("集合")
         
         /* 辞書 */
         // var salse: Dictionary<String, Int> = ["miura": 200,"kentaro": 300]
@@ -332,7 +367,8 @@ class ViewController: UIViewController {
         // 空のdictionaryの変数を生成
         let d2 = [String: Int]()
         print(d2.isEmpty)
-
+        items.append("辞書")
+        
         /* 関数 */
         
         // 関数をセット
@@ -607,7 +643,6 @@ class ViewController: UIViewController {
             {
                 print("\(msg) \(name)")
             }
-
         }
         
         let kenken = User7("kenken",200)
@@ -1069,6 +1104,27 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
 
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.subtitle, reuseIdentifier: "Cell")
+        cell.textLabel?.text = items[indexPath.row]
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return items.count;
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        textData = items[indexPath.row]
+        performSegue(withIdentifier: "showDetailViewController",sender: nil)
+    }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
+        if (segue.identifier == "showDetailViewController") {
+            let detailViewController: DetailViewController = (segue.destination as? DetailViewController)!
+            detailViewController.textData = textData
+        }
+    }
 }
 
