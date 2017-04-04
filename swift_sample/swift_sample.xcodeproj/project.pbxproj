@@ -14,6 +14,9 @@
 		F866037A1DF2CD1D006E74BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F86603781DF2CD1D006E74BD /* LaunchScreen.storyboard */; };
 		F86603851DF2CD1D006E74BD /* swift_sampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86603841DF2CD1D006E74BD /* swift_sampleTests.swift */; };
 		F86603901DF2CD1D006E74BD /* swift_sampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F866038F1DF2CD1D006E74BD /* swift_sampleUITests.swift */; };
+		F8E794A71E93BAAA00C7F826 /* HelloModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E794A61E93BAAA00C7F826 /* HelloModel.swift */; };
+		F8E794AA1E93BACF00C7F826 /* HelloView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E794A91E93BACF00C7F826 /* HelloView.swift */; };
+		F8E794AD1E93BB2400C7F826 /* HelloViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E794AC1E93BB2400C7F826 /* HelloViewController.swift */; };
 		F8FAC5EF1E8FDDE400E3BFFE /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8FAC5EE1E8FDDE400E3BFFE /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +51,9 @@
 		F866038B1DF2CD1D006E74BD /* swift_sampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = swift_sampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F866038F1DF2CD1D006E74BD /* swift_sampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swift_sampleUITests.swift; sourceTree = "<group>"; };
 		F86603911DF2CD1D006E74BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F8E794A61E93BAAA00C7F826 /* HelloModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelloModel.swift; sourceTree = "<group>"; };
+		F8E794A91E93BACF00C7F826 /* HelloView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelloView.swift; sourceTree = "<group>"; };
+		F8E794AC1E93BB2400C7F826 /* HelloViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelloViewController.swift; sourceTree = "<group>"; };
 		F8FAC5EE1E8FDDE400E3BFFE /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -130,6 +136,7 @@
 		F8E7949E1E93B24500C7F826 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F8E794A41E93BA0A00C7F826 /* Hello */,
 				F8E794A11E93B26F00C7F826 /* StroyBoard */,
 			);
 			name = View;
@@ -138,6 +145,7 @@
 		F8E7949F1E93B25200C7F826 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F8E794A51E93BA0E00C7F826 /* Hello */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -145,6 +153,7 @@
 		F8E794A01E93B25A00C7F826 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				F8E794AB1E93BAF800C7F826 /* Hello */,
 				F86603711DF2CD1D006E74BD /* ViewController.swift */,
 				F8FAC5EE1E8FDDE400E3BFFE /* DetailViewController.swift */,
 			);
@@ -158,6 +167,32 @@
 				F86603731DF2CD1D006E74BD /* Main.storyboard */,
 			);
 			name = StroyBoard;
+			sourceTree = "<group>";
+		};
+		F8E794A41E93BA0A00C7F826 /* Hello */ = {
+			isa = PBXGroup;
+			children = (
+				F8E794A91E93BACF00C7F826 /* HelloView.swift */,
+			);
+			name = Hello;
+			path = View/Hello;
+			sourceTree = "<group>";
+		};
+		F8E794A51E93BA0E00C7F826 /* Hello */ = {
+			isa = PBXGroup;
+			children = (
+				F8E794A61E93BAAA00C7F826 /* HelloModel.swift */,
+			);
+			name = Hello;
+			path = Model/Hello;
+			sourceTree = "<group>";
+		};
+		F8E794AB1E93BAF800C7F826 /* Hello */ = {
+			isa = PBXGroup;
+			children = (
+				F8E794AC1E93BB2400C7F826 /* HelloViewController.swift */,
+			);
+			path = Hello;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -297,8 +332,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8E794A71E93BAAA00C7F826 /* HelloModel.swift in Sources */,
 				F8FAC5EF1E8FDDE400E3BFFE /* DetailViewController.swift in Sources */,
 				F86603721DF2CD1D006E74BD /* ViewController.swift in Sources */,
+				F8E794AD1E93BB2400C7F826 /* HelloViewController.swift in Sources */,
+				F8E794AA1E93BACF00C7F826 /* HelloView.swift in Sources */,
 				F86603701DF2CD1D006E74BD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
